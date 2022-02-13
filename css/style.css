@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+.select-box,
+.playboard,
+.result-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.select-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  /* display: none; */
+}
+
+.select-box.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-box header {
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.select-box .content__title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.select-box .content__options {
+  display: flex;
+  width: 100%;
+}
+
+.content__options button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2b8f9f;
+  transition: all 0.3s ease;
+}
+
+.content__options button:hover,
+.result-box .result-box__btn-replay button:hover {
+  transform: scale(0.94);
+}
+
+.content__options button.options--player-x {
+  margin-right: 5px;
+}
+
+.content__options button.options--player-o {
+  margin-left: 5px;
+}
+
+.playboard {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.playboard.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.playboard .playboard__play-area {
+  margin-top: 10px;
+}
+
+.playboard .playboard__detail {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.playboard section {
+  display: flex;
+}
+
+.playboard section span {
+  border-radius: 5px;
+  margin: 2px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  color: #2b8f9f;
+}
+
+.playboard section span:hover {
+  cursor: pointer;
+}
+
+.playboard .detail--current_turn {
+  text-align: center;
+}
+
+.playboard .detail--current_turn .cross {
+  color: #2b8f9f;
+}
+
+.result-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.result-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s ease;
+}
+
+.result-box .result-box__text-winner {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.result-box .result-box__btn-replay {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.result-box .result-box__btn-replay button {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2b8f9f;
+  transition: all 0.3s ease;
+}
