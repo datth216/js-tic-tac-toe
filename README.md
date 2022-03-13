@@ -1,2 +1,2 @@
 # Game Tic Tac Toe
-A simple tic tac toe game using vanilla javascript.
+A simple tic tac toe game using javascript.
